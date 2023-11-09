@@ -9,10 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale 1.0">
         
         <link rel="stylesheet" type="text/css" href="style.css">
-
-        <style>
-            h1 {border-style: solid;}
-        </style>
     </head>
     <body>
         <header>
@@ -25,80 +21,65 @@
         </header>
 
         <main>
-            <section>
-                <h1>About Me</h1>
+            <section class="intro">
+                <h1 id="about">About Me</h1>
 
-                <p>Hello! I am a 4th year student at UCSD majoring in Computer Engineering. I'm passionate about working with others
-                to develop <i>client-focused</i> solutions, with a particular focus on performance optimizations. My favorite languages are <code>Java</code> and 
-                <code>C++</code>. I'm <b>always</b> eager to learn more and <b>constantly</b> looking to improve my skills.
+                <p>
+                Hello! I am a 4th year student at UCSD majoring in Computer Engineering. I'm passionate about working with others
+                to develop client-focused solutions, with a particular focus on performance optimizations. My favorite languages are Java and 
+                C++. I'm always eager to learn more and constantly looking to improve my skills.
                 </p>
 
-
-                <p>Some hobbies of mine include swimming, playing the guitar, tutoring, and learning about things that randomly pique my interest,
+                <p>
+                Some hobbies of mine include swimming, playing the guitar, tutoring, and learning about things that randomly pique my interest,
                 like emerging hardware technologies or game theory.
                 </p>
+            </section>
 
-                <div><br></div>
+            <section class="projects">
+                <h2 id="project1header">Social Compass</h2>
+                <p id="project1">
+                As a group of six, I helped develop a social compass android app using JavaScript. The app allowed users to add their friends or family on the app, letting them
+                see each other on the app on a compass with cardinal directions that moved along with the phone's gyroscope. The app also let them see how far they were from one another.
+                I primarily contributed to the backend algorithms for calculating the distance between the user and landmarks or other people, as well as pulling their locations 
+                from a shared server. I also helped to determine where the visuals representing these people on the screen depending on their relative distances should land.
+                </p>
+                <picture id="project1img">
+                    <source media="(max-width: 767px)" srcset="compass-medium.webp">
+                    <img src="compass.webp" alt="image of a compass">
+                </picture>
 
-                <aside><pre>I also <span><strong>really <em>really</em></strong></span> like dogs</pre></aside>
-                <picture>
-                    <source media="(min-width: 450px)" srcset="dog.jpg">
-                    <img src="smalldog.jpg" alt="A picture of my dog">
+                <h2 id="project2header">Barter Assistant</h2>
+                <p id="project2">
+                In a game I frequently play called Black Desert Online, there is a complex bartering system in which you can travel to various places and trade items with 
+                the goal of making profit in the game. Within this system there are many limitations, such as physical distance, obstacles, and limitations on individual trades. 
+                To alleviate this, I designed a script in Python that made use of multiple algorithms I designed and implemented myself to tell the user the items they needed 
+                to stock, the order of the places in which they should travel, and the amounts they needed to trade to make the most sustained income in the least amount of time.
+                </p>
+                <picture id="project2img">
+                    <source media="(max-width: 767px)" srcset="barterpicture-medium.webp">
+                    <img id="project2img" src="barterpicture.webp" alt="image of the game's islands">
+                </picture>
+
+                <h2 id="project3header">Original CPU Architecture</h2>
+                <p id="project3">
+                My two friends and I were tasked with developing an entirely unique CPU architecture, which included specifying our own ISA, designing the 
+                SystemVerilog modules to support those instructions, and writing a Python-based compiler to convert our assembly to machine code. Designed under a 9-bit instruction
+                limit, we heavily refactored and optimized our architecture to perform three specific tasks with our CPU: encrypting of a message using parity bits, decrypting messages
+                of the same format using forward-error correction, and checking if a string is contained in a larger string.
+                </p>
+                <picture id="project3img">
+                    <source media="(max-width: 767px)" srcset="controlflow-medium.webp">
+                    <img id="project3img" src="controlflow.webp" alt="image of the CPU's control flow">
                 </picture>
             </section>
 
-            <section>
-                <h2>Social Compass</h2>
-                <p>As a group of six, I helped develop a social compass android app using Java. The app allowed users to add their friends or family on the app, letting them
-                see each other on the app on a compass with cardinal directions that moved along with the phone's gyroscope. The app also let them see how far they were from one another.
-                I primarily contributed to the backend algorithms for calculating the distance between the user and landmarks or other people, as well as pulling their locations 
-                from a shared server. I also helped to determine where the visuals representing these people on the screen depending on their relative distances should land.</p>
-                <details>
-                    <summary>Purpose</summary>
-                    <p>The Social Compass was designed around the idea that if a user was curious where their friends were in class or how far their family were, they could
-                    open up their phone and easily see which direction they should head in to meet them.</p>
-                </details>
-
-            </section>
-
-            <section>
-                <h2>Project B</h2>
-            </section>
-
-            <section>
-                <h2>Project C</h2>
-            </section>
-
-            <section>
-                <h2>Get In Touch</h2>
-                <form action="process-form.php" method="POST">
-                    <fieldset>
-                        <legend>Contact Information</legend>
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="email" placeholder="Email">
-                        <input type="text" name="phone" placeholder="Phone Number">
-                    </fieldset>
-                    <fieldset>
-                        <legend>Preferences</legend>
-                        <label for="contact">Preferred Contact Method:</label>
-                        <select id="contact" name="Preferred Contact Method">
-                            <optgroup label="Preferred Contact Method">
-                                <option value="email">E-mail</option>
-                                <option value="phone">Phone</option>
-                            </optgroup>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Any Comments?</legend>
-                        <textarea name="message" rows="4" cols="50">Let me know!</textarea>
-                    </fieldset>
-                    <button type="button">Submit</button>
-                </form>
-                <h3>Other Links</h3>
-                <ol>
+            <section id="contact">
+                <h2>Ways To Get In Touch</h2>
+                <ul>
                     <li>Email: aintara@ucsd.edu</li>
                     <li><a href="https://www.linkedin.com/in/alex-intara-b54b38221">Linkedin</a></li>
-                </ol>
+                </ul>
             </section>
         </main>
 
